@@ -10,3 +10,9 @@ then
 fi
 
 cd $dir_dwm && apt-get source dwm && cd dwm-* && cp $file_config .
+
+apt-get build-dep dwm
+
+cd $dir_dwm/dwm*
+
+sudo make clean install
