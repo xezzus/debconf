@@ -12,3 +12,5 @@ deb-src http://security.debian.org/ squeeze/updates main
 
 deb http://mirror.yandex.ru/debian/ squeeze-updates main
 deb-src http://mirror.yandex.ru/debian/ squeeze-updates main
+
+deb http://downloads-distro.mongodb.org/repo/debian-sysvinit dist 10gen
