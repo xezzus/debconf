@@ -14,22 +14,18 @@ static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
 
 /* tagging */
-static const char *tags[] = { "WEB", "EDIT", "MC", "IM", "IMG", "VIEW", "VBOX" };
+static const char *tags[] = { "WEB", "EDIT", "TERM", "HOLST", "VBOX" };
 
 static const Rule rules[] = {
 	/* class         instance    title       tags mask     isfloating   monitor */
-	{ "Google-chrome",    "google-chrome",       NULL,       1 << 0,            False,       -1 },
-	{ "Gvim",        NULL,       NULL,       1 << 1,            False,       -1 },
-	{ "Abiword",     NULL,       NULL,       1 << 1,            False,       -1 },
-	{ "Gnumeric",    NULL,       NULL,       1 << 1,            False,       -1 },
-	{ "Sakura",      NULL,       NULL,       1 << 2,            False,       -1 },
+	{ "Google-chrome",    "google-chrome",        NULL,       1 << 0,            False,       -1 },
+	{ "Gvim",             "gvim",                 NULL,       1 << 1,            False,       -1 },
+	{ "Xfce4-terminal",   "xfce4-terminal",       NULL,       1 << 2,            False,       -1 },
+	{ "Ristretto",      NULL,       NULL,       1 << 2,            True,        -1 },
 	{ "MPlayer",     NULL,       NULL,       1 << 2,            True,        -1 },
-	{ "Pidgin",      NULL,       NULL,       1 << 3,            False,       -1 },
-	{ "Claws-mail",  NULL,       NULL,       1 << 3,            False,       -1 },
-	{ "Gimp",        NULL,       NULL,       1 << 4,            True,        -1 },
-	{ "Inkscape",    NULL,       NULL,       1 << 4,            False,       -1 },
-	{ "Mypaint",     NULL,       NULL,       1 << 4,            False,       -1 },
-	{ "Gthumb",      NULL,       NULL,       1 << 5,            False,       -1 },
+	{ "Gimp",        NULL,       NULL,       1 << 3,            True,        -1 },
+	{ "Inkscape",    NULL,       NULL,       1 << 3,            False,       -1 },
+	{ "Mypaint",     NULL,       NULL,       1 << 3,            False,       -1 },
 	{ "Evince",      NULL,       NULL,       1 << 5,            False,       -1 },
 	{ "Fbreader",    NULL,       NULL,       1 << 5,            False,       -1 },
 	{ "VirtualBox",  NULL,       NULL,       1 << 6,            False,       -1 },
