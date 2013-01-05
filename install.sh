@@ -1,7 +1,7 @@
 #!/bin/sh
 
 user=web
-home=/home/user
+home=/home/$user
 
 # INSTALL CORE SOFT
 cp sources.list /etc/apt
