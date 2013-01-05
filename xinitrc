@@ -9,7 +9,7 @@ xset s off &
 xrdb ~/.Xresources &
 
 feh --bg-scale /home/web/images/wall.jpg &
-xfce4-terminal &
-xfce4-terminal &
+sakura &
+sakura &
 google-chrome &
 exec dwm
