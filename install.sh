@@ -25,8 +25,8 @@ cd $dir_dwm/dwm*
 make clean install
 
 # INSTALL CONFIG
-cp sudoers /etc
-cp xinitrc $home/.xinitrc
-cp sakura.conf $home/.config/sakura
+cp ./sudoers /etc
+cp ./xinitrc $home/.xinitrc
+cp ./sakura.conf $home/.config/sakura
 chown -R $user:$user $home/*
 
