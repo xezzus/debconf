@@ -14,3 +14,5 @@ deb http://mirror.yandex.ru/debian/ squeeze-updates main
 deb-src http://mirror.yandex.ru/debian/ squeeze-updates main
 
 deb http://downloads-distro.mongodb.org/repo/debian-sysvinit dist 10gen
+
+deb http://dl.google.com/linux/chrome/deb/ stable main
