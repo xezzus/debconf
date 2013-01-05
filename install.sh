@@ -2,9 +2,11 @@
 
 user=web
 home=/home/$user
+dwm=~/Dwm
+dir=~/Workspace
 
 # INSTALL CORE SOFT
-cp sources.list /etc/apt
+cp ~/Workspace/sources.list /etc/apt
 wget http://www.dotdeb.org/dotdeb.gpg
 cat dotdeb.gpg | apt-key add -
 apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
@@ -12,21 +14,18 @@ aptitude update && aptitude full-upgrade
 aptitude install sudo git vim-gtk dpkg-dev dwm suckless-tools xclip mongodb-10gen xserver-xorg-core xorg sakura
 
 # INSTALL DWM
-dir_dwm=~/Dwm
-dir_workspace=~/Workspace
-file_config=$dir_workspace/config.h
-if [ ! -d $dir_dwm ]
+if [ ! -d $dwm ]
 then
-  mkdir $dir_dwm
+  mkdir $dwm
 fi
-cd $dir_dwm && apt-get source dwm && cd dwm-* && cp $file_config .
+cd $dwm && apt-get source dwm && cd dwm-* && cp $dir/config.h .
 apt-get build-dep dwm
-cd $dir_dwm/dwm*
+cd $dwm/dwm*
 make clean install
 
 # INSTALL CONFIG
 cp ~/Workspace/sudoers /etc
-cp ./xinitrc $home/.xinitrc
-cp ./sakura.conf $home/.config/sakura
+cp ~/Workspace/xinitrc $home/.xinitrc
+cp ~/Workspace/sakura.conf $home/.config/sakura
 chown -R $user:$user $home/*
 
