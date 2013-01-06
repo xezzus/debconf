@@ -1,0 +1,13 @@
+acl trusted-dns {127.0.0.1;};
+options {
+  directory "/var/cache/bind";
+  version "0.0";
+	auth-nxdomain no;    # conform to RFC1035
+	listen-on { any; };
+	listen-on-v6 { any; };
+  recursion yes;
+  allow-recursion { any; };
+  allow-transfer { any; };
+	allow-query { any; };
+  allow-update { none; };
+};
