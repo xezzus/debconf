@@ -38,6 +38,7 @@ cp $dir/named.conf.options /etc/bind
 cp $dir/db.dev /etc/bind
 
 # INSTALL CONFIG
+cp $dir/dhclient.conf /etc/dhcp
 cp $dir/sudoers /etc
 cp $dir/xinitrc $home/.xinitrc
 cp $dir/sakura.conf $home/.config/sakura
