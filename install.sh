@@ -11,8 +11,9 @@ wget http://www.dotdeb.org/dotdeb.gpg
 cat dotdeb.gpg | apt-key add -
 apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
 gpg --keyserver subkeys.pgp.net --recv A040830F7FAC5991 && gpg --export --armor A040830F7FAC5991 | sudo apt-key add -
+wget -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
 aptitude update && aptitude full-upgrade
-aptitude install sudo git vim-gtk dpkg-dev dwm suckless-tools xclip mongodb-10gen xserver-xorg-core xorg sakura google-chrome-stable nginx bind9 xfonts-terminus ttf-liberation
+aptitude install sudo git vim-gtk dpkg-dev dwm suckless-tools xclip mongodb-10gen xserver-xorg-core xorg sakura google-chrome-stable nginx bind9 xfonts-terminus ttf-liberation gthumb gtk2-engines
 
 # INSTALL DWM
 mkdir -p $dwm

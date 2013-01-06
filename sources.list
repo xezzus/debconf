@@ -20,3 +20,6 @@ deb http://downloads-distro.mongodb.org/repo/debian-sysvinit dist 10gen
 # google
 deb http://dl.google.com/linux/chrome/deb/ stable main
 deb http://dl.google.com/linux/earth/deb/ stable main
+
+# postgresql
+deb http://apt.postgresql.org/pub/repos/apt/ squeeze-pgdg main
