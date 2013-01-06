@@ -1,4 +1,4 @@
 zone "dev" {
     type master;
     file "/etc/bind/db.dev";
-}
+};
