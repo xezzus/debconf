@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+gvim --servername gvim --remote-tab-silent "$*"
