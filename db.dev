@@ -1,0 +1,17 @@
+$TTL 3600        ; 1 hour
+@             IN      SOA    dev. root.dev. (
+                                2012110602      ; Serial
+                                10800           ; Refresh
+                                3600            ; Retry
+                                604800          ; Expire
+                                86400           ; Minimum TTL
+                         )
+
+
+; DNS Servers
+                 IN      NS      127.0.0.1
+                 IN      A       127.0.0.1
+
+; Machine Names
+ns1              IN      A       127.0.0.1
+*                IN      A       127.0.0.1
