@@ -33,8 +33,8 @@ mkdir -p $home/public/use/wordpress/public
 mkdir -p $home/public/webcmf/public
 
 # INSTALL BIND
-cp $home/named.conf.local /etc/bind
-cp $home/db.dev /etc/bind
+cp $dir/named.conf.local /etc/bind
+cp $dir/db.dev /etc/bind
 
 # INSTALL CONFIG
 cp $dir/sudoers /etc
