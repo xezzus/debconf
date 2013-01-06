@@ -38,12 +38,19 @@ cp $dir/named.conf.local /etc/bind
 cp $dir/named.conf.options /etc/bind
 cp $dir/db.dev /etc/bind
 
+# INSTALL THEMES
+cp -r $dir/elementary /usr/share/icons
+cp -r $dir/default /usr/share/icons
+cp -r $dir/Xeonyx /usr/share/icons
+cp -r $dir/BSMsdm /usr/share/themes
+cp $dir/gtkrc /etc/gtk-2.0
+
 # INSTALL CONFIG
 cp $dir/dhclient.conf /etc/dhcp
 cp $dir/sudoers /etc
 cp $dir/xinitrc $home/.xinitrc
 cp $dir/sakura.conf $home/.config/sakura
-cp $dir/vide /usr/sbin && chown root:root /usr/sbin/vide && chmod +x /usr/sbin/vide
+cp $dir/vide /usr/bin && chown root:root /usr/sbin/vide && chmod +x /usr/sbin/vide
 cp $dir/vimrc /etc/vim
 cp $dir/jellybeans.vim /usr/share/vim/$vim/colors
 chown -R $user:$user $home/*

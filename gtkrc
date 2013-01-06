@@ -1,0 +1,6 @@
+gtk-icon-theme-name="elementary"
+include "/usr/share/themes/BSMsdm/gtk-2.0/gtkrc"
+
+style "user-font" { font_name="Liberation Sans 9" }
+widget_class "*" style "user-font"
+gtk-font-name="Liberation Sans 9"
