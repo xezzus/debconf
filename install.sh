@@ -34,6 +34,7 @@ mkdir -p $home/public/webcmf/public
 
 # INSTALL BIND
 cp $dir/named.conf.local /etc/bind
+cp $dir/named.conf.options /etc/bind
 cp $dir/db.dev /etc/bind
 
 # INSTALL CONFIG
