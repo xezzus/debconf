@@ -3,6 +3,7 @@ user=web
 home=/home/$user
 dwm=~/Dwm
 dir=~/Workspace
+vim=vim72
 
 # INSTALL CORE SOFT
 cp ~/Workspace/sources.list /etc/apt
@@ -44,4 +45,5 @@ cp $dir/xinitrc $home/.xinitrc
 cp $dir/sakura.conf $home/.config/sakura
 cp $dir/vide /usr/sbin && chown root:root /usr/sbin/vide && chmod +x /usr/sbin/vide
 cp $dir/vimrc /etc/vim
+cp $dit/jellybeans.vim /usr/share/vim/$vim/colors
 chown -R $user:$user $home/*
