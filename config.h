@@ -18,10 +18,10 @@ static const char *tags[] = { "WEB", "EDIT", "TERM", "HOLST", "VBOX" };
 
 static const Rule rules[] = {
 	/* class         instance    title       tags mask     isfloating   monitor */
-	{ "Google-chrome",    "google-chrome",        NULL,       1 << 0,            False,       -1 },
-	{ "Gvim",             "gvim",                 NULL,       1 << 1,            False,       -1 },
-	{ "Xfce4-terminal",   "xfce4-terminal",       NULL,       1 << 2,            False,       -1 },
-	{ "Ristretto",      NULL,       NULL,       1 << 2,            True,        -1 },
+	{ "Google-chrome", "google-chrome", NULL,       1 << 0,            False,       -1 },
+	{ "Gvim",          "gvim",          NULL,       1 << 1,            False,       -1 },
+	{ "Sakura",        "sakura",        NULL,       1 << 2,            False,       -1 },
+	{ "Gthumb",        "gthumb",        NULL,       1 << 2,            True,        -1 },
 	{ "MPlayer",     NULL,       NULL,       1 << 2,            True,        -1 },
 	{ "Gimp",        NULL,       NULL,       1 << 3,            True,        -1 },
 	{ "Inkscape",    NULL,       NULL,       1 << 3,            False,       -1 },
