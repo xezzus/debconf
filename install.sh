@@ -12,7 +12,7 @@ cat dotdeb.gpg | apt-key add -
 apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
 gpg --keyserver subkeys.pgp.net --recv A040830F7FAC5991 && gpg --export --armor A040830F7FAC5991 | sudo apt-key add -
 aptitude update && aptitude full-upgrade
-aptitude install sudo git vim-gtk dpkg-dev dwm suckless-tools xclip mongodb-10gen xserver-xorg-core xorg sakura google-chrome-stable nginx bind9 xfonts-terminus
+aptitude install sudo git vim-gtk dpkg-dev dwm suckless-tools xclip mongodb-10gen xserver-xorg-core xorg sakura google-chrome-stable nginx bind9 xfonts-terminus ttf-liberation
 
 # INSTALL DWM
 mkdir -p $dwm
@@ -45,5 +45,5 @@ cp $dir/xinitrc $home/.xinitrc
 cp $dir/sakura.conf $home/.config/sakura
 cp $dir/vide /usr/sbin && chown root:root /usr/sbin/vide && chmod +x /usr/sbin/vide
 cp $dir/vimrc /etc/vim
-cp $dit/jellybeans.vim /usr/share/vim/$vim/colors
+cp $dir/jellybeans.vim /usr/share/vim/$vim/colors
 chown -R $user:$user $home/*
