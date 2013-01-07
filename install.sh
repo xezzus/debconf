@@ -17,7 +17,7 @@ aptitude install sudo git vim-gtk dpkg-dev dwm \
 suckless-tools xclip mongodb-10gen xserver-xorg-core \
 xorg sakura google-chrome-stable nginx bind9 \
 xfonts-terminus ttf-liberation gthumb gtk2-engines \
-mysql-server postfix ca-certificates evince gimp\
+mysql-server postfix ca-certificates evince gimp \
 inkscape mc 
 
 # INSTALL DWM
@@ -53,10 +53,10 @@ cp $dir/gtkrc /etc/gtk-2.0
 
 # INSTALL POSTFIX
 cp $dir/main.cf /etc/postfix
-cp $dir/sasl_passwd /etc/postfix
+cp $dir/sasl_password /etc/postfix/
 cp $dir/transport /etc/postfix
-chmod 400 /etc/postfix/sasl_passwd
-postmap /etc/postfix/sasl_passwd
+chmod 400 /etc/postfix/sasl_password
+postmap /etc/postfix/sasl_password
 postmap /etc/postfix/transport
 ln -s /etc/ssl/certs/Equifax_Secure_CA.pem /etc/postfix/cacert.pem
 #sendmail -bv xezzus@gmail.com
