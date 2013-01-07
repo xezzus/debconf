@@ -65,7 +65,7 @@ ln -s /etc/ssl/certs/Equifax_Secure_CA.pem /etc/postfix/cacert.pem
 
 # INSTALL PHP
 cp $dir/php.ini /etc/php5/fpm
-rm /etc/php5/fpm/php.ini
+rm /etc/php5/cli/php.ini
 ln -s /etc/php5/fpm/php.ini /etc/php5/cli
 cp $dir/php-fpm.conf /etc/php5/fpm
 
