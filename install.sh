@@ -18,7 +18,8 @@ suckless-tools xclip mongodb-10gen xserver-xorg-core \
 xorg sakura google-chrome-stable nginx bind9 \
 xfonts-terminus ttf-liberation gthumb gtk2-engines \
 mysql-server postfix ca-certificates evince gimp \
-inkscape mc 
+inkscape mc php5-cli php5-fpm php-pear php5-dev
+pecl install mongo
 
 # INSTALL DWM
 mkdir -p $dwm
@@ -61,6 +62,12 @@ postmap /etc/postfix/transport
 ln -s /etc/ssl/certs/Equifax_Secure_CA.pem /etc/postfix/cacert.pem
 #sendmail -bv xezzus@gmail.com
 #tail /var/log/mail.log
+
+# INSTALL PHP
+cp $dir/php.ini /etc/php5/fpm
+rm /etc/php5/fpm/php.ini
+ln -s /etc/php5/fpm/php.ini /etc/php5/cli
+cp $dir/php-fpm.conf /etc/php5/fpm
 
 # INSTALL CONFIG
 cp $dir/dhclient.conf /etc/dhcp
