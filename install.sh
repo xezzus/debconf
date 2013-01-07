@@ -13,7 +13,7 @@ apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
 gpg --keyserver subkeys.pgp.net --recv A040830F7FAC5991 && gpg --export --armor A040830F7FAC5991 | sudo apt-key add -
 wget -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
 aptitude update && aptitude full-upgrade
-aptitude install sudo git vim-gtk dpkg-dev dwm suckless-tools xclip mongodb-10gen xserver-xorg-core xorg sakura google-chrome-stable nginx bind9 xfonts-terminus ttf-liberation gthumb gtk2-engines
+aptitude install sudo git vim-gtk dpkg-dev dwm suckless-tools xclip mongodb-10gen xserver-xorg-core xorg sakura google-chrome-stable nginx bind9 xfonts-terminus ttf-liberation gthumb gtk2-engines mysql-server postfix ca-certificates evince gimp inkscape 
 
 # INSTALL DWM
 mkdir -p $dwm
@@ -45,6 +45,17 @@ cp -r $dir/default /usr/share/icons
 cp -r $dir/Xeonyx /usr/share/icons
 cp -r $dir/BSMsdm /usr/share/themes
 cp $dir/gtkrc /etc/gtk-2.0
+
+# INSTALL POSTFIX
+cp $dir/main.cf /etc/postfix
+cp $dir/sasl_passwd /etc/postfix
+cp $dir/transport /etc/postfix
+chmod 400 /etc/postfix/sasl_password
+postmap /etc/postfix/sasl_password
+postmap /etc/postfix/transport
+ln -s /etc/ssl/certs/Equifax_Secure_CA.pem /etc/postfix/cacert.pem
+#sendmail -bv xezzus@gmail.com
+#tail /var/log/mail.log
 
 # INSTALL CONFIG
 cp $dir/dhclient.conf /etc/dhcp
