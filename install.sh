@@ -53,10 +53,10 @@ cp $dir/gtkrc /etc/gtk-2.0
 
 # INSTALL POSTFIX
 cp $dir/main.cf /etc/postfix
-cp $dir/sasl_password /etc/postfix
+cp $dir/sasl_passwd /etc/postfix
 cp $dir/transport /etc/postfix
-chmod 400 /etc/postfix/sasl_password
-postmap /etc/postfix/sasl_password
+chmod 400 /etc/postfix/sasl_passwd
+postmap /etc/postfix/sasl_passwd
 postmap /etc/postfix/transport
 ln -s /etc/ssl/certs/Equifax_Secure_CA.pem /etc/postfix/cacert.pem
 #sendmail -bv xezzus@gmail.com
