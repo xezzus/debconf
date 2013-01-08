@@ -6,7 +6,7 @@ dir=~/debconf
 vim=vim72
 
 # INSTALL CORE SOFT
-cp ~/Workspace/sources.list /etc/apt
+cp $dir/sources.list /etc/apt
 wget http://www.dotdeb.org/dotdeb.gpg
 cat dotdeb.gpg | apt-key add -
 apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
@@ -86,4 +86,5 @@ cp $dir/vide /usr/bin && chown root:root /usr/bin/vide && chmod +x /usr/bin/vide
 cp $dir/vimrc /etc/vim
 cp $dir/jellybeans.vim /usr/share/vim/$vim/colors
 cp $dir/slim.conf /etc
+cp $dir/bashrc $home/.bashrc
 chown -R $user:$user $home
