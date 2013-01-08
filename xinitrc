@@ -1,4 +1,3 @@
-conky | sh | dzen2 -ta r -p -y 600 &
 while true; 
 do
    xsetroot -name "$(date +"%A %B %d.%m.%Y")"
@@ -9,8 +8,8 @@ xset -dpms &
 xset s off &
 xrdb ~/.Xresources &
 
-feh --bg-scale /home/web/images/wall.jpg &
 sakura &
 sakura &
 google-chrome &
+conky | sh | dzen2 -ta r -p -y 100 &
 exec dwm
