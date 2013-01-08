@@ -19,11 +19,11 @@ xorg sakura google-chrome-stable nginx bind9 \
 xfonts-terminus ttf-liberation gthumb gtk2-engines \
 mysql-server postfix ca-certificates evince gimp \
 inkscape mc php5-cli php5-fpm php-pear php5-dev
-pecl install mongo slim
+pecl install mongo slim conky
 
 # INSTALL DWM
 mkdir -p $dwm
-cd $dwm && apt-get source dwm && cd dwm-* && cp $dir/config.h .
+cd $dwm && apt-get source dwm && cd dwm-* && cp $dir/config.h . && cp $dir/dwm.c .
 apt-get build-dep dwm
 cd $dwm/dwm*
 make clean install

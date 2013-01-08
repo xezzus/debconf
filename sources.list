@@ -9,8 +9,8 @@ deb http://packages.dotdeb.org squeeze all
 deb-src http://packages.dotdeb.org squeeze all
 
 # yandex
-deb http://mirror.yandex.ru/debian/ squeeze main
-deb-src http://mirror.yandex.ru/debian/ squeeze main
+deb http://mirror.yandex.ru/debian/ squeeze main contrib
+deb-src http://mirror.yandex.ru/debian/ squeeze main contrib
 deb http://mirror.yandex.ru/debian/ squeeze-updates main
 deb-src http://mirror.yandex.ru/debian/ squeeze-updates main
 
