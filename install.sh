@@ -86,5 +86,5 @@ cp $dir/vide /usr/bin && chown root:root /usr/bin/vide && chmod +x /usr/bin/vide
 cp $dir/vimrc /etc/vim
 cp $dir/jellybeans.vim /usr/share/vim/$vim/colors
 cp $dir/slim.conf /etc
-cp $dir/bashrc $home/.bashrc
+echo 'export LANG="ru_RU.UTF-8"' >> $home/.bashrc
 chown -R $user:$user $home
