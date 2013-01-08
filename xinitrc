@@ -1,6 +1,7 @@
+conky | sh | dzen2 -ta r -p -y 600 &
 while true; 
 do
-   xsetroot -name "CPU$(sensors |grep 'temp1'|awk '{print $2}')  media-$(df -h|grep sda4|awk '{print $5}') $(date +"%d/%m/%Y %H:%M")"
+   xsetroot -name "$(date +"%A %B %d.%m.%Y")"
    sleep 1m
 done &
 

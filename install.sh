@@ -19,7 +19,7 @@ xorg sakura google-chrome-stable nginx bind9 \
 xfonts-terminus ttf-liberation gthumb gtk2-engines \
 mysql-server postfix ca-certificates evince gimp \
 inkscape mc php5-cli php5-fpm php-pear php5-dev
-pecl install mongo slim conky
+pecl install mongo slim conky dzen2
 
 # INSTALL DWM
 mkdir -p $dwm
@@ -69,6 +69,10 @@ rm /etc/php5/cli/php.ini
 ln -s /etc/php5/fpm/php.ini /etc/php5/cli
 cp $dir/php-fpm.conf /etc/php5/fpm
 cp -r $dir/info $home/public/use
+
+# INSTALL DZEN
+cp $dir/conkyrc $home/.conkyrc
+cp -r $dir/dzen $home/.dzen
 
 # INSTALL CONFIG
 cp $dir/dhclient.conf /etc/dhcp
