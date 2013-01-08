@@ -18,8 +18,11 @@ suckless-tools xclip mongodb-10gen xserver-xorg-core \
 xorg sakura google-chrome-stable nginx bind9 \
 xfonts-terminus ttf-liberation gthumb gtk2-engines \
 mysql-server postfix ca-certificates evince gimp \
-inkscape mc php5-cli php5-fpm php-pear php5-dev
-pecl install mongo slim conky dzen2
+inkscape mc php5-cli php5-fpm php-pear php5-dev \
+slim conky dzen2
+
+# PHP PECL
+pecl install mongo 
 
 # INSTALL DWM
 mkdir -p $dwm
@@ -78,8 +81,8 @@ cp -r $dir/dzen $home/.dzen
 cp $dir/dhclient.conf /etc/dhcp
 cp $dir/sudoers /etc
 cp $dir/xinitrc $home/.xinitrc
-cp $dir/sakura.conf $home/.config/sakura
-cp $dir/vide /usr/bin && chown root:root /usr/sbin/vide && chmod +x /usr/sbin/vide
+cp -r $dir/sakura $home/.config
+cp $dir/vide /usr/bin && chown root:root /usr/bin/vide && chmod +x /usr/bin/vide
 cp $dir/vimrc /etc/vim
 cp $dir/jellybeans.vim /usr/share/vim/$vim/colors
 cp $dir/slim.conf /etc
