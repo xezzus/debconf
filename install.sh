@@ -81,7 +81,7 @@ cp -r $dir/dzen $home/.dzen
 cp $dir/dhclient.conf /etc/dhcp
 cp $dir/sudoers /etc
 cp $dir/xinitrc $home/.xinitrc
-cp -r $dir/sakura $home/.config
+cp -r $dir/config $home/.config
 cp $dir/vide /usr/bin && chown root:root /usr/bin/vide && chmod +x /usr/bin/vide
 cp $dir/vimrc /etc/vim
 cp $dir/jellybeans.vim /usr/share/vim/$vim/colors
