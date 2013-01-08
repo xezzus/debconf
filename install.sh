@@ -1,8 +1,8 @@
 #!/bin/sh
 user=web
 home=/home/$user
-dwm=~/Dwm
-dir=~/Workspace
+dwm=~/dwm
+dir=~/debconf
 vim=vim72
 
 # INSTALL CORE SOFT
