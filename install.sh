@@ -19,7 +19,7 @@ xorg sakura google-chrome-stable nginx bind9 \
 xfonts-terminus ttf-liberation gthumb gtk2-engines \
 mysql-server postfix ca-certificates evince gimp \
 inkscape mc php5-cli php5-fpm php-pear php5-dev
-pecl install mongo
+pecl install mongo slim
 
 # INSTALL DWM
 mkdir -p $dwm
@@ -78,4 +78,5 @@ cp $dir/sakura.conf $home/.config/sakura
 cp $dir/vide /usr/bin && chown root:root /usr/sbin/vide && chmod +x /usr/sbin/vide
 cp $dir/vimrc /etc/vim
 cp $dir/jellybeans.vim /usr/share/vim/$vim/colors
+cp $dir/slim.conf /etc
 chown -R $user:$user $home/*
