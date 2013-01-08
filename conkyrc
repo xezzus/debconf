@@ -6,8 +6,6 @@ total_run_times 0
 use_spacer none
 
 TEXT
-#echo -n '^fg(\#FFFFFF)^i($HOME/.dzen/temp.xbm)^fg(\#99CCFF)${execi 3600 ~/weather.sh}^fg(\#FFFFFF) '
-#echo -n '^i($HOME/.dzen/mini.mail2.xpm) ^fg(\#99CCFF)${execi 60 python ~/checkmail.py} new mail(s)^fg(\#FFFFFF) '
 echo -n '^fg(\#FFFFFF)^i($HOME/.dzen/arr_down.xbm) ^fg(\#99CCFF)${downspeed eth0}^fg(\#FFFFFF) '
 echo -n '^fg(\#FFFFFF)^i($HOME/.dzen/arr_up.xbm) ^fg(\#99CCFF)${upspeed eth0}^fg(\#FFFFFF) '
 echo -n '^fg(\#FFFFFF)^i($HOME/.dzen/cpu.xbm) ^fg(\#99CCFF)${cpu}%^fg(\#FFFFFF) '
