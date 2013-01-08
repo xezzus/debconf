@@ -10,6 +10,5 @@ echo -n '^fg(\#FFFFFF)^i($HOME/.dzen/arr_down.xbm) ^fg(\#99CCFF)${downspeed eth0
 echo -n '^fg(\#FFFFFF)^i($HOME/.dzen/arr_up.xbm) ^fg(\#99CCFF)${upspeed eth0}^fg(\#FFFFFF) '
 echo -n '^fg(\#FFFFFF)^i($HOME/.dzen/cpu.xbm) ^fg(\#99CCFF)${cpu}%^fg(\#FFFFFF) '
 echo -n '^i($HOME/.dzen/mem.xbm)^fg(\#99CCFF) ${memperc}%^fg(\#FFFFFF) '
-echo -n '^i($HOME/.dzen/mini.clock2.xpm) ^fg(\#99CCFF)${time %k}:${time %M}^fg(\#FFFFFF) '
 
 echo
