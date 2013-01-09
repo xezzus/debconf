@@ -1,0 +1,8 @@
+[user]
+	name = Andrey Lisovoy
+	email = xezzus@gmail.com
+[github]
+[core]
+	editor = vim
+[merge]
+	tool = vimdiff

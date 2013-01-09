@@ -1,0 +1,17 @@
+min_peers = 1
+max_peers = 1000
+download_rate = 10000
+upload_rate = 375
+session = /media/torrent/session
+schedule = watch_directory_1,5,5,"load_start=/media/torrent/image/*.torrent, d.set_directory=/media/image"
+schedule = watch_directory_1,5,5,"load_start=/media/torrent/books/*.torrent, d.set_directory=/media/books"
+schedule = watch_directory_7,5,5,"load_start=/media/torrent/video/*.torrent, d.set_directory=/media/video"
+schedule = watch_directory_9,5,5,"load_start=/media/torrent/audio*.torrent, d.set_directory=/media/audio"
+port_range = 40890-40890
+port_random = yes
+check_hash = yes
+session_save = yes
+encryption = allow_incoming,enable_retry,prefer_plaintext 
+use_udp_trackers = yes
+encoding_list = UTF-8
+#scgi_port = localhost:5000

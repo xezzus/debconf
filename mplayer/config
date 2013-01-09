@@ -1,0 +1,9 @@
+# Write your default config options here!
+zoom=yes
+subcp=cp1251
+subfont-text-scale=4
+ass=yes
+subpos=55
+subfont-blur=8
+subfont-outline=8
+fontconfig=yes

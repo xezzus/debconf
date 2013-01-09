@@ -6,7 +6,7 @@ dir=~/debconf
 vim=vim72
 
 # PURGE
-aptitude purge exim4
+aptitude purge exim4 exim4-base exim4-config exim4-daemon-light
 
 # SOURCES
 cp $dir/sources.list /etc/apt
@@ -27,7 +27,7 @@ xorg sakura google-chrome-stable nginx bind9 \
 xfonts-terminus ttf-liberation gthumb gtk2-engines \
 postfix ca-certificates evince gimp \
 inkscape mc php5-cli php5-fpm php-pear php5-dev \
-slim conky dzen2 console-cyrillic
+slim conky dzen2
 
 # PHP PECL
 pecl install mongo 
@@ -41,7 +41,6 @@ make clean install
 
 # INSTALL NGINX
 cp $dir/nginx.conf /etc/nginx
-mkdir -p $home/public/webcmf/public
 
 # INSTALL BIND
 cp $dir/named.conf.local /etc/bind
@@ -87,13 +86,16 @@ cp $dir/vimrc /etc/vim
 cp $dir/jellybeans.vim /usr/share/vim/$vim/colors
 cp $dir/slim.conf /etc
 cp $dir/mc.ext /etc/mc
-cp $dir/nginx /etc/init.d
+cp -r $dir/mplayer $home/.mplayer
+cp $dir/gitconfig $home/.gitconfig
+cp $dir/rotorrent.rc $home/.rtorrect.rc
 
 # CHOWN
 chown -R $user:$user $home
 
 # INSTALL FSTAB
 echo "tmpfs   /tmp        tmpfs   size=100M   0   0" >> /etc/fstab
+echo "tmpfs   /mnt        tmpfs   size=100M   0   0" >> /etc/fstab
 echo "tmpfs   /var/tmp    tmpfs   size=100M   0   0" >> /etc/fstab
 echo "tmpfs   /var/log    tmpfs   size=100M   0   0" >> /etc/fstab
 echo "tmpfs   /var/lock   tmpfs   size=100M   0   0" >> /etc/fstab
