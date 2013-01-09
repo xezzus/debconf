@@ -5,24 +5,29 @@ dwm=~/dwm
 dir=~/debconf
 vim=vim72
 
-# CLEAR SOFT
+# PURGE
 aptitude purge exim4
 
-# INSTALL CORE SOFT
+# SOURCES
 cp $dir/sources.list /etc/apt
-wget http://www.dotdeb.org/dotdeb.gpg
-cat dotdeb.gpg | apt-key add -
-apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
-gpg --keyserver subkeys.pgp.net --recv A040830F7FAC5991 && gpg --export --armor A040830F7FAC5991 | sudo apt-key add -
-wget -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
+
+# KEY dotdeb
+wget http://www.dotdeb.org/dotdeb.gpg && cat dotdeb.gpg | apt-key add -
+
+# KEY GOOGLE
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+
+# UPDATE
 aptitude update && aptitude full-upgrade
+
+# INSTALL
 aptitude install sudo git vim-gtk dpkg-dev dwm \
-suckless-tools xclip mongodb-10gen xserver-xorg-core \
-xorg sakura google-chrome-stable nginx bind9 console-cyrillic \
+suckless-tools xclip xserver-xorg-core \
+xorg sakura google-chrome-stable nginx bind9 \
 xfonts-terminus ttf-liberation gthumb gtk2-engines \
-mysql-server postfix ca-certificates evince gimp \
+postfix ca-certificates evince gimp \
 inkscape mc php5-cli php5-fpm php-pear php5-dev \
-slim conky dzen2
+slim conky dzen2 console-cyrillic
 
 # PHP PECL
 pecl install mongo 
@@ -36,14 +41,6 @@ make clean install
 
 # INSTALL NGINX
 cp $dir/nginx.conf /etc/nginx
-mkdir -p $home/public/use/mysql/public
-mkdir -p $home/public/use/pgadmin/public
-mkdir -p $home/public/use/mongo/public
-mkdir -p $home/public/use/joomla/public
-mkdir -p $home/public/use/ocstore/public
-mkdir -p $home/public/use/opencart/public
-mkdir -p $home/public/use/oscommerce/public
-mkdir -p $home/public/use/wordpress/public
 mkdir -p $home/public/webcmf/public
 
 # INSTALL BIND
