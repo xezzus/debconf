@@ -15,7 +15,7 @@ wget -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key ad
 aptitude update && aptitude full-upgrade
 aptitude install sudo git vim-gtk dpkg-dev dwm \
 suckless-tools xclip mongodb-10gen xserver-xorg-core \
-xorg sakura google-chrome-stable nginx bind9 \
+xorg sakura google-chrome-stable nginx bind9 console-cyrillic \
 xfonts-terminus ttf-liberation gthumb gtk2-engines \
 mysql-server postfix ca-certificates evince gimp \
 inkscape mc php5-cli php5-fpm php-pear php5-dev \
@@ -86,5 +86,4 @@ cp $dir/vide /usr/bin && chown root:root /usr/bin/vide && chmod +x /usr/bin/vide
 cp $dir/vimrc /etc/vim
 cp $dir/jellybeans.vim /usr/share/vim/$vim/colors
 cp $dir/slim.conf /etc
-echo 'export LANG="ru_RU.UTF-8"' >> $home/.bashrc
 chown -R $user:$user $home

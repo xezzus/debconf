@@ -1,3 +1,4 @@
+export LANG="ru_RU.UTF-8"
 while true; 
 do
    xsetroot -name "$(date +"%A %B %d.%m.%Y %H:%M")"
