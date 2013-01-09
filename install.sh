@@ -88,7 +88,7 @@ cp $dir/slim.conf /etc
 cp $dir/mc.ext /etc/mc
 cp -r $dir/mplayer $home/.mplayer
 cp $dir/gitconfig $home/.gitconfig
-cp $dir/rotorrent.rc $home/.rtorrect.rc
+cp $dir/rtorrent.rc $home/.rtorrent.rc
 
 # CHOWN
 chown -R $user:$user $home
