@@ -5,6 +5,9 @@ dwm=~/dwm
 dir=~/debconf
 vim=vim72
 
+# CLEAR SOFT
+aptitude purge exim4
+
 # INSTALL CORE SOFT
 cp $dir/sources.list /etc/apt
 wget http://www.dotdeb.org/dotdeb.gpg
@@ -87,4 +90,14 @@ cp $dir/vimrc /etc/vim
 cp $dir/jellybeans.vim /usr/share/vim/$vim/colors
 cp $dir/slim.conf /etc
 cp $dir/mc.ext /etc/mc
+cp $dir/nginx /etc/init.d
+
+# CHOWN
 chown -R $user:$user $home
+
+# INSTALL FSTAB
+echo "tmpfs   /tmp        tmpfs   size=100M   0   0" >> /etc/fstab
+echo "tmpfs   /var/tmp    tmpfs   size=100M   0   0" >> /etc/fstab
+echo "tmpfs   /var/log    tmpfs   size=100M   0   0" >> /etc/fstab
+echo "tmpfs   /var/lock   tmpfs   size=100M   0   0" >> /etc/fstab
+echo "tmpfs   /var/run    tmpfs   size=100M   0   0" >> /etc/fstab
