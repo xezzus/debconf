@@ -70,7 +70,7 @@ cp $dir/php.ini /etc/php5/fpm
 rm /etc/php5/cli/php.ini
 ln -s /etc/php5/fpm/php.ini /etc/php5/cli
 cp $dir/php-fpm.conf /etc/php5/fpm
-cp -r $dir/info $home/public/use
+mkdir -p $home/public/use && cp -r $dir/info $home/public/use
 
 # INSTALL DZEN
 cp $dir/conkyrc $home/.conkyrc
