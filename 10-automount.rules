@@ -1,0 +1,4 @@
+SUBSYSTEM=="block", KERNEL=="sd[c-z][0-9]", ACTION=="add", RUN+="/bin/mkdir -p /mnt/usb-%k"
+SUBSYSTEM=="block", KERNEL=="sd[c-z][0-9]", ACTION=="add", RUN+="/bin/mount -o uid=1000,gid=1000 /dev/%k /mnt/usb-%k"
+SUBSYSTEM=="block", KERNEL=="sd[c-z][0-9]", ACTION=="remove", RUN+="/bin/umount /mnt/usb-%k"
+SUBSYSTEM=="block", KERNEL=="sd[c-z][0-9]", ACTION=="remove", RUN+="/bin/rm -r /mnt/usb-%k"

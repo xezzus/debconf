@@ -1,4 +1,6 @@
 export LANG="ru_RU.UTF-8"
+export EDITOR="vide"
+
 while true; 
 do
    xsetroot -name "$(date +"%A %B %d.%m.%Y %H:%M")"
@@ -12,5 +14,5 @@ xrdb ~/.Xresources &
 sakura &
 sakura &
 google-chrome &
-conky | sh | dzen2 -ta r -p -y 100 &
+conky | sh | dzen2 -ta r -p -y 1062 &
 exec dwm

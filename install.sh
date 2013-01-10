@@ -89,6 +89,8 @@ cp $dir/mc.ext /etc/mc
 cp -r $dir/mplayer $home/.mplayer
 cp $dir/gitconfig $home/.gitconfig
 cp $dir/rtorrent.rc $home/.rtorrent.rc
+cp $dir/10-automount.rules /etc/udev/rules.d
+cp $dir/bashrc $home/.bashrc
 
 # CHOWN
 chown -R $user:$user $home
