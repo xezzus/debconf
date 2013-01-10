@@ -96,9 +96,9 @@ cp $dir/bashrc $home/.bashrc
 chown -R $user:$user $home
 
 # INSTALL FSTAB
-echo "tmpfs   /tmp        tmpfs   size=100M   0   0" >> /etc/fstab
-echo "tmpfs   /mnt        tmpfs   size=100M   0   0" >> /etc/fstab
-echo "tmpfs   /var/tmp    tmpfs   size=100M   0   0" >> /etc/fstab
-echo "tmpfs   /var/log    tmpfs   size=100M   0   0" >> /etc/fstab
-echo "tmpfs   /var/lock   tmpfs   size=100M   0   0" >> /etc/fstab
-echo "tmpfs   /var/run    tmpfs   size=100M   0   0" >> /etc/fstab
+#echo "tmpfs   /tmp        tmpfs   size=100M   0   0" >> /etc/fstab
+#echo "tmpfs   /mnt        tmpfs   size=100M   0   0" >> /etc/fstab
+#echo "tmpfs   /var/tmp    tmpfs   size=100M   0   0" >> /etc/fstab
+#echo "tmpfs   /var/log    tmpfs   size=100M   0   0" >> /etc/fstab
+#echo "tmpfs   /var/lock   tmpfs   size=100M   0   0" >> /etc/fstab
+#echo "tmpfs   /var/run    tmpfs   size=100M   0   0" >> /etc/fstab
