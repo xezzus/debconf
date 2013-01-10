@@ -27,7 +27,7 @@ xorg sakura google-chrome-stable nginx bind9 \
 xfonts-terminus ttf-liberation gthumb gtk2-engines \
 postfix ca-certificates evince gimp \
 inkscape mc php5-cli php5-fpm php-pear php5-dev \
-slim conky dzen2
+slim conky dzen2 xfs xfsprogs unzip zip rar unrar
 
 # PHP PECL
 pecl install mongo 
