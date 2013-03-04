@@ -20,6 +20,9 @@ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add
 # KEY POSTGRES
 wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
 
+# KEY ERLANG
+wget -O - http://binaries.erlang-solutions.com/debian/erlang_solutions.asc | sudo apt-key add -
+
 # UPDATE
 aptitude update && aptitude full-upgrade
 
