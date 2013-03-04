@@ -23,3 +23,6 @@ deb http://dl.google.com/linux/earth/deb/ stable main
 
 # postgresql
 deb http://apt.postgresql.org/pub/repos/apt/ squeeze-pgdg main
+
+# erlang
+deb http://binaries.erlang-solutions.com/debian squeeze contrib
